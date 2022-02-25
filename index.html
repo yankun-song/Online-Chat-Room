@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="title"><h1>Online Chatroom</h1></div>
+
+    <input
+      type="text"
+      id="username-box"
+      onfocus="this.value=''"
+      value="Enter Your Username Here"
+    />
+    <div id="chatbox"></div>
+    <div id="inputbox">
+      <input
+        id="message-to-send"
+        type="text"
+        onfocus="this.value=''"
+        value="Enter Your Message Here"
+      />
+      <button id="send-button" type="button">Send Message</button>
+    </div>
+  </body>
+
+  <script src="./node_modules/expect/umd/expect.min.js"></script>
+  <script src="./node_modules/mocha/mocha.js"></script>
+  <script src="./test/polyfill.js"></script>
+  <script src="./client/main.js"></script>
+
+  <script>
+    // If called from Mocha Phantom-JS on the command line then add the test scripts
+    // to the end of the document.
+    if (window.callPhantom) {
+      mocha.setup("bdd");
+      addScript("./test/online-chatroom-test.js");
+      addScript("./test/runMocha.js");
+    }
+
+    function addScript(path) {
+      var js = document.createElement("script");
+      js.type = "text/javascript";
+      js.src = path;
+      document.body.appendChild(js);
+    }
+  </script>
+</html>

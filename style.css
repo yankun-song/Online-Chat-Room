@@ -1,0 +1,60 @@
+/* background-color: #457b9d; */
+body {
+  /* margin: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#username-box {
+  width: 30%;
+  margin: 20px;
+}
+
+#chatbox {
+  /* overflow-y: scroll; */
+  /* display: flex; */
+  /* //flex-direction: column; */
+  height: 50%;
+  width: 50%;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: solid black;
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: #f1faee;
+}
+#inputbox {
+  height: 10%;
+  width: 50%;
+  border: solid black;
+  border-radius: 10px;
+  margin: 5px 0;
+  background-color: #f0f0f5;
+
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+#message-to-send {
+  height: 100%;
+  width: 80%;
+  border: transparent;
+  background-color: transparent;
+}
+#send-button {
+  height: 100%;
+  width: 20%;
+  border: transparent;
+  background-color: transparent;
+}
+.created_by {
+  font-weight: bold;
+  margin: 0 10px 0 0;
+}
+.message {
+  margin: 10px 10px;
+}
+.nameAndTime {
+  display: flex;
+}
