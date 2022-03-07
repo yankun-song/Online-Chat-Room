@@ -1,7 +1,7 @@
 # Online Chat Room
 In this project, I created a chatroom page where people can chat with each other.
 
-**Tech used: DOM manipulation/ AJAX/ Server communication**
+**Tech used: DOM manipulation/ AJAX/ Client-Server communication**
 
 In this chatroom, you can create a text input and send it to the server. It will also retrieve the latest 50 messages from the server every 3 seconds.
 
